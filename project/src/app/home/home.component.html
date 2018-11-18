@@ -1,0 +1,70 @@
+<nz-layout class="layout">
+  <nz-header>
+    <div class="logo"></div>
+    <ul nz-menu [nzTheme]="'dark'" [nzMode]="'horizontal'" style="line-height: 64px;">
+      <li nz-menu-item>nav 1</li>
+      <li nz-menu-item>nav 2</li>
+      <li nz-menu-item (click)="login()">{{ '退出' | translate }}</li>
+      <li nz-menu-item >  <a [routerLink]="['./userinfo']">{{ '用户信息'| translate }}</a></li>
+      <nz-switch   (click)="clickSwitch()"></nz-switch>
+    </ul>
+  </nz-header>
+  <nz-layout >
+    <nz-sider [nzWidth]="150" style="background-color:black">
+      <ul nz-menu [nzMode]="'inline'" style="height:100%;background:#ddd;color:#000">
+        <li nz-submenu>
+          <span title><i class="anticon anticon-user"></i>{{ '商店' | translate }}</span>
+          <ul>
+            <li nz-menu-item>
+              <a [routerLink]="['./tel']">{{ '购物车' | translate }}</a></li>
+            <li nz-menu-item>
+              <a [routerLink]="['./com']">{{ '平板电脑' | translate }}</a>
+            </li>
+            <li nz-menu-item>
+              <a [routerLink]="['./animations']">{{ '商品选择' | translate }}</a>
+            </li>
+          </ul>
+        </li>
+        <li nz-submenu>
+          <span title><i class="anticon anticon-laptop"></i>{{ '综合服务' | translate }}</span>
+          <ul>
+            <li nz-menu-item  [routerLink]="['./sourceinfo']">{{ '一个组件' | translate }}</li>
+            <li nz-menu-item  [routerLink]="['./news']">{{ '图书信息' | translate }}</li>
+            <li nz-menu-item  [routerLink]="['./maps']">{{ '打卡信息' | translate }}</li>
+            <li nz-menu-item  [routerLink]="['./record']">{{ '日志信息' | translate }}</li>
+          </ul>
+        </li>
+        <li nz-submenu>
+            <span title><i class="anticon anticon-customer-service"></i>{{ '休闲选择' | translate }}</span>
+            <ul>
+              <li nz-menu-item [routerLink]="['./music']">{{ '音乐' | translate }}</li>
+              <li nz-menu-item [routerLink]="['./film']">{{ '影视' | translate }}</li>
+              <li nz-menu-item [routerLink]="['./games']">{{ '游戏' | translate }}</li>
+              <li nz-menu-item [routerLink]="['./listname']">{{ '报名列表' | translate }}</li>
+              <li nz-menu-item [routerLink]="['./gamesplay']">{{ '游戏体验' | translate }}</li>
+            </ul>
+          </li>
+        <li nz-submenu>
+          <span title><i class="anticon anticon-apple-o"></i>{{ '餐饮类' | translate }}</span>
+          <ul>
+            <li nz-menu-item>{{ '水果类' | translate }}</li>
+            <li nz-menu-item>{{ '酒水类' | translate }}</li>
+            <li nz-menu-item>{{ '饮食类' | translate }}</li>
+          </ul>
+        </li>
+      </ul>
+    </nz-sider>
+    <!-- style="padding:0 24px 24px" style="margin:16px 0;"-->
+    <nz-layout >
+      <nz-breadcrumb >
+        <!-- <nz-breadcrumb-item>Home</nz-breadcrumb-item>
+        <nz-breadcrumb-item>List</nz-breadcrumb-item>
+        <nz-breadcrumb-item>App</nz-breadcrumb-item> -->
+      </nz-breadcrumb>
+      <nz-content style="background:#fff;padding:0px 20px; min-height: 580px;">
+         
+          <router-outlet></router-outlet>
+      </nz-content>
+    </nz-layout>
+  </nz-layout>
+</nz-layout>

@@ -1,0 +1,22 @@
+<div style="background: #ECECEC;padding:0px;">
+    <div nz-row [nzGutter]="8">
+      <div nz-col [nzSpan]="8"  *ngFor="let index of lib"  >
+        <nz-card nzTitle="图片">
+          <p>作者:{{index.author}}</p>
+          <p>书名:{{index.name}}</p>
+          <p>价格:{{index.price}}￥</p>
+          <p  style="width: 150px;font-size:12px;overflow: hidden;white-space: nowrap;
+          text-overflow: ellipsis;">介绍:{{index.instru}}</p>
+      
+        <button  nz-button [nzType]="'default'" (click)="showModal(index)"><a>查看详情</a></button>
+         
+        <button nz-button (click)="buybook(index)">加入购物车</button>
+   </nz-card>
+      </div>
+    </div>
+  </div>
+
+  <nz-modal   [(nzVisible)]="isVisible" nzTitle="图书信息" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()">
+     <app-n3></app-n3>
+  </nz-modal>
+  <!-- <a [routerLink]="['../n1',index.id]"></a> -->

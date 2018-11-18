@@ -1,0 +1,24 @@
+.header {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    border:1px solid #ddd;
+    margin: 0px auto;
+}
+.snake {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    border:1px solid red;
+     top:200px;
+     left: 200px;
+
+}
+.button {
+    width: 360px;
+    height: 40px;
+    margin: 20px auto;
+}
+.button  button {
+    margin: 0px 10px;
+}

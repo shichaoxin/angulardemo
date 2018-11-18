@@ -1,0 +1,36 @@
+
+{
+    "退出": "back",
+    "用户信息":"userinfo",
+
+        "商店":"store",
+        "购物车":"shoppingcar",
+        "平板电脑": "computer",
+        "商品选择": "storchoose",
+        "综合服务": "allservice",
+        "一个组件": "component",
+        "图书信息": "libraryinfo",
+        "打卡信息": "playcard",
+        "日志信息":"messages",
+        "休闲选择":"spare",
+        "音乐": "music",
+        "影视": "film",
+        "游戏": "games",
+        "游戏体验":"gamesplay",
+        "报名列表": "listname",
+        "餐饮类":"eating",
+        "水果类":"fruilt",
+        "酒水类":"bearing",
+        "饮食类":"food",
+        "购买的家电":"Purchased appliance",
+        "购买的书籍":"Books purchased",
+        "购买的餐饮":"Food and beverage",
+        "考勤组:考勤":"Attendance group: attendance",
+        "今天继续向着梦想出发吧":"Keep going to dream today",
+        "打卡时间":"Punch time",
+        "打卡":"Punch",
+        "上班时间":"working time",
+        "下班时间":"breaking time",
+       "一天工作辛苦了,好好休息":"Have a fun for today"
+        
+}

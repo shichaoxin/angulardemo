@@ -1,0 +1,17 @@
+<button nz-button nzType="default" (click)="showModal()">结算
+     <nz-modal   [(nzVisible)]="isVisible" nzTitle="收获详情" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()">
+       <app-n4></app-n4>
+     </nz-modal>
+</button>
+<span>总价是:{{ all.Allmoney }}￥</span>
+<button   style="float: right;;"  nz-button nzType="danger" (click)="Nothing()">清空</button>
+<hr>
+<div *ngFor="let index of buybook;let i = index">
+<div>书名：{{index.name}}</div>
+<div>价格：{{index.price}}</div>
+
+<button nz-button nzType="primary" (click)="Notbuy(index,i)">不买了</button>
+<hr>
+</div>
+<hr>
+

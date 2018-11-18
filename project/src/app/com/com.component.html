@@ -1,0 +1,48 @@
+<div>这是父组件，我要显示子组件的内容，需要在子组件的ts文件中,
+  其中父组件提供数据
+  对传值的子组件的属性加上装饰器@Input。在父组件中对传值的属性，
+  进行属性的绑定 [goodId]="goods" [goodCount]="200"。
+</div>
+<div>
+<input  [(ngModel)]="goods"> 
+
+<app-sourceinfo [goodId]="goods" [goodCount]="goodCount | number:'1.2-2'"></app-sourceinfo>
+</div>
+
+<hr>
+<div>
+  关于dome属性
+</div>
+<div >
+  <input value="shichaoxin" (input)="Ondack($event)">
+  <button [style.backgroundColor]="isSpecail?'red':'green'" (click)="toggle()">点击</button>
+</div>
+<hr>
+<div>事件处理模板本地变量获得value</div>
+<!-- <input #myFiled (click)="onkeykey()"> -->
+<hr>
+<div>
+  响应式编程处理表单，通过流的方式进行数据的传递，search：FormControl = new formControl
+  this.search.valueChanges
+  .subscribe(stock=>this.stokinfo(stock));
+</div>
+<input [formControl]="search">
+<hr>
+<div>
+  管道生成管道ng g pipe pipe/multiple
+</div>
+<div class="ff">
+      在animations中体现了响应式编程加上管道的知识十一个demo<br>
+      在app.module中声明ReactiveModule
+      keyword:sting;
+      search:FormControl = new FormControl;
+      通过流的把数据传给input
+          this.search.valuechanges
+            .subscribe(value=>this.keyword=value);
+        之后在管道  
+        {{/   return list.filter(item=>{
+          //      let Value = item[search];
+          //      return Value.indexOf(keyword)>=0
+          //   })
+    </div>
+    

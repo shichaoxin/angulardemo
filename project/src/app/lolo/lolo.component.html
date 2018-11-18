@@ -1,0 +1,31 @@
+<p>{{Lolo.id}}</p>
+<p>{{Lolo.title}}</p>
+<p>{{Lolo.price}}</p>
+<p>{{Lolo.desc}}</p>
+<app-stars [rating]="Lolo.rating"></app-stars>
+<hr>
+<!-- 我要评论 -->
+<div>
+  <button class="btn btn-success" (click)="ishidden=!ishidden">我要评论</button>
+</div>
+<div [hidden]="!ishidden">
+<div>
+  <app-stars  [(rating)]="newRating"    [readonly]="false"></app-stars>
+</div>
+<div>
+  <textarea [(ngModel)]="newComment" ></textarea>
+</div>
+<button class="btn" (click)="newevent()">提交</button>
+</div>
+<hr>
+<!-- //评论区域 -->
+<div nz-row [nzGutter]="8">
+    <div nz-col [nzSpan]="8"  *ngFor="let index of comments"> 
+      <nz-card nzTitle="Card title">
+        <p>{{index.user}}</p>
+        <p>{{index.content}}</p>
+        <p>{{index.time}}</p>
+        <app-stars [rating]="index.rating"></app-stars>
+      </nz-card>
+    </div>
+  </div>

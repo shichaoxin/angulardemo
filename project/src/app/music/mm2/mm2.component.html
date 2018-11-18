@@ -1,0 +1,22 @@
+<div class="headerr">
+        <ul>
+          <li><a>单曲</a></li>
+          <li><a>歌手</a></li>
+          <li><a>专辑</a></li>
+          <li><a>文件</a></li>
+        </ul>
+</div>
+<div class="body"> 
+    <div class="wrap" *ngFor="let index of music;let i=index" (click)="show(index)">
+        <span>{{index.songname}}</span>
+        <span>{{index.song}}</span>
+        <audio [src]="index.address" controls="controls"  loop   #audio ></audio>
+    <hr>
+    </div>  
+<hr>
+</div>
+<div class="footer">
+ <p>Life Is Music</p>
+</div> 
+
+

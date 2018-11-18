@@ -1,0 +1,14 @@
+<!-- <div *ngFor="let idnex of music">
+{{idnex.songname}}
+{{idnex.name}}
+{{idnex.songlist}}
+</div> -->
+<!-- {{music[0]?.songname}}
+{{music[0]?.name}}
+{{music[0]?.songlist}} -->
+<nz-card style="width:300px;" nzTitle={{music[0]?.songname}} [nzExtra]="extraTemplate">
+    {{music[0]?.songlist}}
+  </nz-card>
+  <ng-template #extraTemplate>
+    <a>{{music[0]?.name}}</a>
+  </ng-template>

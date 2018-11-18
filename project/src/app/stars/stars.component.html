@@ -1,0 +1,91 @@
+<nz-rate [(ngModel)]="rating" nzAllowHalf  (click)="changestar()"  ></nz-rate>
+<span  class="ant-rate-text">{{rating}}星</span>
+
+
+
+<!-- 中间人模式 -->
+<!-- <div class="com1">
+    <p>我是com1组件</p>
+    <input type="button" value="com1按钮" (click)="com1Fn($event)" />
+</div>
+//com1组件ts代码
+//创建一个输出
+@Output()
+outcom1Fn = new EventEmitter<string>();
+
+com1Fn(){
+  this.outcom1Fn.emit("我是com1组件的");
+}
+
+//根组件作为中间者模式代码
+//中间者ts文件
+private com1Tocom2;
+//根组件作为中间者
+appFn(event:any){
+  console.log(event);
+  this.com1Tocom2 = event;
+}
+
+
+//中间者html代码
+<app-com1 (outcom1Fn)="appFn($event)"></app-com1>
+<app-com2 [com2]="com1Tocom2"></app-com2>
+
+
+
+//com2组件ts代码
+@Input() com2:string = "";
+//com2组件的html代码
+<div class="com2">
+    <p>我是com2组件</p>
+    <p>我是com1组件传递过来的:{{com2}}</p>
+</div> -->
+
+
+
+
+<!-- 直接将父组件当做服务注入到子组件中 -->
+<!-- import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-father1',
+  templateUrl: './father1.component.html',
+  styleUrls: ['./father1.component.css']
+})
+export class Father1Component implements OnInit {
+
+  constructor() { }
+  public name:string = "我是父组件的名字";
+  public dataSet:Array<any> = [
+    {"id":"0","name":"张三"},
+    {"id":"1","name":"李四"},
+    {"id":"2","name":"王五"}
+  ]
+  ngOnInit() {
+  }
+
+} -->
+
+<!-- //子组件ts文件
+import { Component, OnInit } from '@angular/core';
+import {Father1Component} from "app/father1/father1.component";
+
+@Component({
+  selector: 'app-child1',
+  templateUrl: './child1.component.html',
+  styleUrls: ['./child1.component.css']
+})
+export class Child1Component implements OnInit {
+
+  constructor(private father1:Father1Component) { }
+
+  ngOnInit() {
+  }
+
+} -->
+
+<!-- //子组件html代码
+<p>{{father1.name}}</p>
+<ul>
+    <li *ngFor="let item of father1.dataSet">{{item.name}}</li>
+</ul> -->

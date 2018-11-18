@@ -1,0 +1,38 @@
+<!-- <div *ngFor="let index of data">
+  <div>{{index.id}}</div>
+  <div>{{index.title}}</div>
+  <div>{{index.price}}</div>
+  <div>{{index.desc}}</div>
+</div> -->
+<div>用管道加上异步编程流的方法进行编程</div>
+<input nz-input placeholder="请输入。。。。" [formControl]="search">
+<hr>
+
+<button (click)="addstoer()">添加商品</button>
+商品Id<input [(ngModel)]="id">
+标题<input   [(ngModel)]="title">
+价格<input   [(ngModel)]="price">
+星数<app-stars [(rating)]="rating"></app-stars>
+描述<input [(ngModel)]="desc">
+
+<hr>
+<div style="background: #ECECEC;padding:30px;">
+    <div nz-row [nzGutter]="8">
+      <div nz-col [nzSpan]="8" *ngFor="let i=index;let index of datas | filter:'title':keyword" >
+        <nz-card nzTitle="Card title">
+          <p>{{index.id}}</p>
+          <p><a [routerLink]="['../animations',index.id]">{{index.title}}</a></p>
+          <p>{{index.price}}</p>
+          <p>{{index.desc}}</p>
+          <p>
+         <button  [style.backgroundColor]="index.iscolor?'red':'green'" 
+            (click)="delete(index)"  
+      nz-button [nzType]="'primary'"      
+            >{{index.iscolor1}}</button>
+          </p>
+          <button (click)="delete1(i)">删除商品</button>
+          <app-stars [rating]="index.rating" nzDisabled='false'></app-stars>
+        </nz-card>
+      </div>
+    </div>  
+</div>

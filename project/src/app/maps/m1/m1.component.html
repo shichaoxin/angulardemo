@@ -1,0 +1,48 @@
+<div class="header">
+        <div class="header-left">
+            <div class="message">
+               <div class="message-left">{{data[0].name}}</div>
+               <div class="message-right">
+                 <h2>{{data[0].name}}</h2>
+                 <p>考勤组:考勤</p>
+               </div>
+            </div>
+        </div>
+        <div class="header-right">
+           <div >打卡日历
+            
+           </div>
+        </div>
+</div>
+<hr>
+<!-- <nz-collapse [nzBordered]="false">
+        <nz-collapse-panel *ngFor="let panel of panels" [nzHeader]="panel.name" [nzActive]="panel.active">
+          <p>{{panel.date}}</p>
+          <p>{{panel.disabled}}</p>
+        </nz-collapse-panel>
+</nz-collapse> -->
+<nz-collapse [nzBordered]="false">
+        <nz-collapse-panel    nzHeader = "出勤班次" >
+            <h3>{{timess[0]?.uptime | date:'yyy-MM-dd'}}&nbsp;&nbsp;{{timess[0]?.uptime | date:'EE'}}</h3>
+        </nz-collapse-panel>
+</nz-collapse> 
+<!-- 今日出勤打卡时间 -->
+<nz-collapse [nzBordered]="false">
+    <nz-collapse-panel    nzHeader = "出勤时间" >
+        <p>上班时间:{{timess[0]?.uptime | date:'HH:mm:ss'}}</p> 
+        <p>下班时间:{{timess[1]?.downtime | date:'HH:mm:ss'}}</p> 
+    </nz-collapse-panel>
+</nz-collapse>
+ <!--缺卡次数  -->
+ <nz-collapse [nzBordered]="false">
+    <nz-collapse-panel    nzHeader = "迟到次数" >
+        <p>迟到次数<b>{{timess[0]?.lose}}</b>次</p>
+    </nz-collapse-panel>
+</nz-collapse> 
+<!-- 早退次数 -->
+<nz-collapse [nzBordered]="false">
+    <nz-collapse-panel    nzHeader = "早退次数" >
+        <p>早退次数<b>{{timess[1]?.early}}</b>次</p>
+    </nz-collapse-panel>
+</nz-collapse> 
+

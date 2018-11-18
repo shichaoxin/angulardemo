@@ -1,0 +1,31 @@
+<!-- <div *ngFor="let index of list;let i=index">
+    {{index.name}}
+    {{index.sportname}}
+    {{index.sportplace}}
+    {{index.sporttime}}
+</div> -->
+<h1>青少年运动报名表</h1>
+<nz-table
+#middleTable
+nzSize="middle"
+[nzData]="list">
+<thead>
+  <tr> 
+    <th>参赛者</th>
+    <th>ID</th>
+    <th>项目</th>
+    <th>地点</th>
+    <th>时间</th>
+  </tr>
+</thead>
+<tbody>
+  <tr *ngFor="let index of list;let i=index">
+      <td>{{index.id}}</td>
+    <td>{{index.name}}</td>
+    <td>{{index.sportname}}</td>
+    <td>{{index.sportplace}}</td>    
+    <td>{{index.sporttime}}</td>
+  
+  </tr>
+</tbody>
+</nz-table>

@@ -1,0 +1,29 @@
+<h1>青少年运动报名表</h1>
+<button nz-button [nzType]="'[primary]'" (click)="Submit()"><span>提交</span></button>
+<nz-table
+#middleTable
+nzSize="middle"
+[nzData]="data">
+<thead>
+  <tr>
+    <th></th>
+    <th>项目</th>
+    <th>比赛地点</th>
+    <th>名额</th>
+    <th>时间</th>
+    <th>选择</th>
+    <th>不选择</th>
+  </tr>
+</thead>
+<tbody>
+  <tr *ngFor="let index of middleTable.data;let i=index">
+    <td>{{index.id}}</td>
+    <td>{{index.name}}</td>
+    <td>{{index.place}}</td>
+    <td>{{index.num}}</td>
+    <td>{{index.time}}</td>
+    <td><label nz-checkbox  [(nzChecked)]="index.choose"   (click)="choose(index)" ></label></td>
+    <td><label nz-checkbox  [(nzChecked)]="index.choose1"   (click)="notchoose(index,i)" ></label></td>
+  </tr>
+</tbody>
+</nz-table>

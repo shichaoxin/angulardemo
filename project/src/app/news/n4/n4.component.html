@@ -1,0 +1,11 @@
+<input   nz-input type="text" id="name" placeholder="姓名" [(ngModel)]="userinfo[0].name" >
+<div style="width:10px;height: 20px;;"></div>
+<input    nz-input type="text" id="phone" placeholder="联系方式"[(ngModel)]="userinfo[0].phone" >
+<div style="width:10px;height: 20px;;"></div>
+<input   nz-input type="text" id="address" placeholder="收货地址" [(ngModel)]="userinfo[0].address" >
+<hr>
+<div style="text:algin">支付方式</div>
+<div>下单时间:{{current | date:'yyy-MM-dd  HH:mm:ss'}}</div>
+<nz-carousel [nzEffect]="effect"  nzAutoPlay [nzAutoPlaySpeed]=6666>
+  <div nz-carousel-content *ngFor="let index of array"><h3>{{index}}</h3></div>
+</nz-carousel>

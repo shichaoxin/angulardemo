@@ -1,0 +1,33 @@
+<div class="header">
+  <div class="header-left">
+      <div class="message">
+         <div class="message-left">{{data[0].name}}</div>
+         <div class="message-right">
+           <h2>{{data[0].name}}</h2>
+           <p>{{ '考勤组:考勤' | translate }}</p>
+         </div>
+      </div>
+  </div>
+  <div class="header-right">
+     <div>{{ current | date:'yyy-MM-dd'}}</div>
+  </div>
+</div>
+<hr>
+<p>{{ '今天继续向着梦想出发吧'| translate }}</p>
+<p>{{ '上班时间'| translate }}08:30</p>
+<h2 style="font-weight: 700">{{ '打卡时间' | translate}}{{ timess[0]?.uptime |date:'HH:mm:ss' }}</h2>
+<div (click)="stop()" class="time">
+  <div class="time-content">
+      <h4>{{ timess[0]?.state }}</h4>
+      <h4>{{ timess[1]?.statas }}</h4>
+      <h2>{{ time1 | date:'HH:mm:ss'}}</h2>
+  </div>
+</div>
+<hr>
+<p>{{ '下班时间'| translate }}17:30</p>
+<h2 style="font-weight: 700">{{ '打卡时间' | translate}} {{ timess[1]?.downtime |date:'HH:mm:ss'}} </h2>
+<hr>
+<br>
+<br><hr>
+<p>{{ '一天工作辛苦了,好好休息'| translate }}</p>
+<div style="text-align:center;">{{'打卡' | translate}}</div>

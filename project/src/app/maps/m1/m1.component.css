@@ -1,0 +1,38 @@
+.header {
+    width: 100%;
+    height: 100px;
+    background: #ddd;
+}
+.header .header-left {
+    width: 50%;
+    float: left;
+}
+.header .header-left .message {
+   width: 50%;
+   position: relative;
+   top:20px;
+}
+.header .header-left .message .message-left {
+    float: left;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: blue;
+    color:white;
+    line-height: 60px;
+    text-align: center;
+}
+.header .header-left .message .message-right {
+    float: right;
+}
+.header-right {
+    float: right;
+    width: 50%;
+    position: relative;
+}
+.header-right div {
+    z-index:10;
+   position: absolute;
+   right:20px;
+   top:60px;
+}

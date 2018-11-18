@@ -1,0 +1,45 @@
+.headerr {
+    width: 100%;
+    height: 50px;
+    background-color:#666;
+}
+.headerr ul {
+  list-style: none;
+  
+  margin-left: 60px;
+}
+.headerr ul li{
+    display: inline-block;
+    cursor: pointer;
+    margin: 10px 20px;
+}
+.body {
+    width: 100%;
+    background-color: aliceblue
+}
+.wrap {
+   position: relative;
+   width: 100%;
+   height: 50px;
+    
+}
+.wrap span:nth-child(1){
+    position: absolute;
+    top:7px;
+}
+.wrap span:nth-child(2){
+    position: absolute;
+    top:28px;
+}
+.wrap audio {
+    position: absolute;
+    top:12px;
+    right: 20px;
+    cursor: pointer;
+}
+.footer {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}

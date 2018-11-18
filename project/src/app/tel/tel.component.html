@@ -1,0 +1,24 @@
+
+<div>{{ '购买的家电' | translate }}</div>
+<hr>
+<div *ngFor="let index of shoping">
+<form (keyup)="money(index,myfiled.value)">
+        商品名称:{{index.title}}
+        商品的价单价:{{index.price}}
+        购买数量<input type="number" #myfiled>
+        总价钱{{index.allmoney}}
+</form>  
+</div>
+
+<div>
+<!-- 总价是:{{all.Allmoney}}  -->
+</div>
+<hr>
+<div>{{ '购买的书籍' | translate }}</div>
+<div *ngFor="let in of libss">
+下单时间是:{{in.time | date:'yyy-MM-dd  HH:mm:ss'}}
+书籍是：{{in.name}}
+价格是：{{in.price}}
+</div>
+<hr>
+<div>{{'购买的餐饮' | translate}}</div>
